@@ -16,7 +16,7 @@ class StackQueue
 
   def enqueue(ele)
     temp=MyStack.new
-    @store.size.times do |i| 
+    (0...@store.size+1).each do |i| 
       temp.push(@store.pop) 
     end  
     temp.size.times do |i| 
@@ -26,7 +26,7 @@ class StackQueue
 
   def dequeue
     temp=MyStack.new
-    @store.size.times do |i| 
+   (0...@store.size+1).each  do |i| 
       temp.push(@store.pop) 
     end  
     temp.pop
